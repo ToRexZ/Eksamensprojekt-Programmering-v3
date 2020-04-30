@@ -27,9 +27,9 @@ namespace Eksamensprojekt_Programmering_v2
         private void TournamentCreator_Shown(object sender, EventArgs e)
         {
             lsbTestTeam.Items.Add("Team: " + t.TeamName);
-            foreach (var item in t.TeamMembers)
+            foreach (var member in t.TeamMembers)
             {
-                lsbTestTeam.Items.Add(item.FirstName + " " + item.LastName);
+                lsbTestTeam.Items.Add(member.FirstName + " " + member.LastName);
             }
         }
     }
