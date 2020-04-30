@@ -117,7 +117,9 @@ namespace Eksamensprojekt_Programmering_v2
                 tournamentCreator.Show();
                 
             }
-            
+            else
+                MessageBox.Show("Please add players to the team, and give the team a name.");
+
         }
 
         private bool ValidTeam()
@@ -155,6 +157,9 @@ namespace Eksamensprojekt_Programmering_v2
                     txtFirstName.Text = "Hans";
                     txtLastName.Text = "Pilgaard";
                     clickCount++;
+                    break;
+                default:
+                    clickCount = 0;
                     break;
             }
 
