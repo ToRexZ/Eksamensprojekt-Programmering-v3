@@ -151,7 +151,11 @@ namespace Eksamensprojekt_Programmering_v2
                     txtLastName.Text = "kristensen";
                     clickCount++;
                     break;
-
+                case 3:
+                    txtFirstName.Text = "Hans";
+                    txtLastName.Text = "Pilgaard";
+                    clickCount++;
+                    break;
             }
 
         }
@@ -173,13 +177,29 @@ namespace Eksamensprojekt_Programmering_v2
 
         private void btnDeletePlayer_Click(object sender, EventArgs e)
         {
+            int i = cmbPlayers.SelectedIndex;
             if (lstOfPlayers.Count != 0)
             {
-                lstOfPlayers.RemoveAt(cmbPlayers.SelectedIndex);
+                DialogResult dialogResult = new DialogResult();
+                if (lstOfTeamMembers.Contains(lstOfPlayers[i]))
+                {
+                    dialogResult = MessageBox.Show("This player is in the team, delete?", "Validation", MessageBoxButtons.YesNo);
+                }
+                if(dialogResult == DialogResult.Yes)
+                {
+                    int j = lsbTeamMembers.FindStringExact(cmbPlayers.Text);
+                    lsbTeamMembers.Items.RemoveAt(j);
+                    lstOfTeamMembers.RemoveAt(j);
+                }
+
+                if (dialogResult == DialogResult.No)
+                    return;
+
+                lstOfPlayers.RemoveAt(i);
                 cmbPlayers.Text = "";
-                cmbPlayers.Items.RemoveAt(cmbPlayers.SelectedIndex);
+                cmbPlayers.Items.RemoveAt(i);
                 if (lstOfPlayers.Count() > 0)
-                    cmbPlayers.SelectedIndex = lstOfPlayers.Count() -1;
+                    cmbPlayers.SelectedIndex = lstOfPlayers.Count() - 1;
             }
         }
     }
