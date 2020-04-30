@@ -114,7 +114,6 @@ namespace Eksamensprojekt_Programmering_v2
                 this.Hide();
                 Team team = new Team { TeamName = txtTeamName.Text, TeamMembers = lstOfTeamMembers };
                 TournamentCreator tournamentCreator = new TournamentCreator(team);
-                //tournamentCreator
                 tournamentCreator.Show();
                 
             }
@@ -169,6 +168,18 @@ namespace Eksamensprojekt_Programmering_v2
             {
                 lstOfTeamMembers.RemoveAt(i);
                 lsbTeamMembers.Items.RemoveAt(i);
+            }
+        }
+
+        private void btnDeletePlayer_Click(object sender, EventArgs e)
+        {
+            if (lstOfPlayers.Count != 0)
+            {
+                lstOfPlayers.RemoveAt(cmbPlayers.SelectedIndex);
+                cmbPlayers.Text = "";
+                cmbPlayers.Items.RemoveAt(cmbPlayers.SelectedIndex);
+                if (lstOfPlayers.Count() > 0)
+                    cmbPlayers.SelectedIndex = lstOfPlayers.Count() -1;
             }
         }
     }

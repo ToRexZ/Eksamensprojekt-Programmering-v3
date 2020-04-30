@@ -242,6 +242,7 @@
             this.btnDeletePlayer.TabIndex = 16;
             this.btnDeletePlayer.Text = "Delete Player";
             this.btnDeletePlayer.UseVisualStyleBackColor = true;
+            this.btnDeletePlayer.Click += new System.EventHandler(this.btnDeletePlayer_Click);
             // 
             // TeamCreatorForm
             // 
