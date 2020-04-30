@@ -8,15 +8,15 @@ namespace Eksamensprojekt_Programmering_v2
 {
     class Player
     {
-        //public string FirstName { get; set; }
+        public string FirstName { get; set; }
         public string LastName { get; set; }
 
         //man kan også skrive det sådan her
-        private string firstName; //field
-        public string FirstName // Proporty
-        {
-            get { return firstName; } //get method
-            set { firstName = value; } //set method
-        }
+        //private string firstName; //field
+        //public string FirstName // Proporty
+        //{
+        //    get { return firstName; } //get method
+        //    set { firstName = value; } //set method
+        //}
     }
 }

@@ -45,8 +45,7 @@ namespace Eksamensprojekt_Programmering_v2
             else
             {
                 MessageBox.Show("Plese fill out the name of the Player. The name may only contain letters.");
-            }
-            
+            } 
         }
 
         
@@ -84,8 +83,11 @@ namespace Eksamensprojekt_Programmering_v2
 
         private bool ValidAddition()
         {
+            if (cmbPlayers.SelectedItem == null)
+                return false;
             if (lsbTeamMembers.Items.Contains(cmbPlayers.SelectedItem))
                 return false;
+
 
             return true;
             
@@ -93,14 +95,27 @@ namespace Eksamensprojekt_Programmering_v2
 
         private void btnCreateTeam_Click(object sender, EventArgs e)
         {
+            if (ValidTeam())
+            {
+                Team team = new Team { TeamName = txtTeamName.Text, TeamMembers = lstOfTeamMembers };
+            }
             
-            Team team = new Team { TeamName = txtTeamName.Text, TeamMembers = lstOfTeamMembers };
+        }
+
+        private bool ValidTeam()
+        {
+            if (txtTeamName.Text == "")
+                return false;
+            if (lstOfTeamMembers.Count == 0)
+                return false;
+            return true;
         }
 
         private void btnTest_Click(object sender, EventArgs e)
         {
             txtFirstName.Text = "victor";
             txtLastName.Text = "risager";
+            txtTeamName.Text = "Test";
         }
 
         private string PrintName(Player p)
