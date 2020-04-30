@@ -19,6 +19,7 @@ namespace Eksamensprojekt_Programmering_v2
         List<Player> lstOfTeamMembers = new List<Player>();
 
         
+
         public TeamCreatorForm()
         {
             InitializeComponent();
@@ -45,8 +46,6 @@ namespace Eksamensprojekt_Programmering_v2
                 cmbPlayers.SelectedIndex = cmbPlayers.FindStringExact(tempName);
             } 
         }
-
-        
 
         public string FirstToUpper(string input)
         {
