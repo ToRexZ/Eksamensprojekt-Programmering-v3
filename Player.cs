@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Eksamensprojekt_Programmering_v2
 {
-    class Player
+    public class Player
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

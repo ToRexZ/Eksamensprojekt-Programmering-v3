@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Eksamensprojekt_Programmering_v2
 {
-    class Team
+    public class Team
     {
         //private List<Player> teamMembers;
         //private string teamName;

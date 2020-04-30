@@ -17,6 +17,8 @@ namespace Eksamensprojekt_Programmering_v2
         List<Player> lstOfPlayers = new List<Player>();
 
         List<Player> lstOfTeamMembers = new List<Player>();
+
+        
         public TeamCreatorForm()
         {
             InitializeComponent();
@@ -41,10 +43,6 @@ namespace Eksamensprojekt_Programmering_v2
                 cmbPlayers.Items.Add(tempName);
                 
                 cmbPlayers.SelectedIndex = cmbPlayers.FindStringExact(tempName);
-            }
-            else
-            {
-                MessageBox.Show("Plese fill out the name of the Player. The name may only contain letters.");
             } 
         }
 
@@ -63,9 +61,25 @@ namespace Eksamensprojekt_Programmering_v2
         private bool ValidName()
         {
             if (txtFirstName.Text == "" || txtLastName.Text == "")
+            {
+                MessageBox.Show("Plese fill out the name of the Player.");
                 return false;
+            }
+                
+
             if (!Regex.IsMatch(txtFirstName.Text, @"^[a-zA-Z]+$") || !Regex.IsMatch(txtLastName.Text, @"^[a-zA-Z]+$"))
+            {
+                MessageBox.Show("The name may only contain letters.");
                 return false;
+            }
+
+            if (cmbPlayers.Items.Contains(FirstToUpper(txtFirstName.Text) + " " + FirstToUpper(txtLastName.Text)))
+            {
+                MessageBox.Show("The Player already excists.");
+                return false;
+            }
+               
+            
             return true;
         }
 
@@ -97,7 +111,12 @@ namespace Eksamensprojekt_Programmering_v2
         {
             if (ValidTeam())
             {
+                this.Hide();
                 Team team = new Team { TeamName = txtTeamName.Text, TeamMembers = lstOfTeamMembers };
+                TournamentCreator tournamentCreator = new TournamentCreator(team);
+                //tournamentCreator
+                tournamentCreator.Show();
+                
             }
             
         }
@@ -111,11 +130,31 @@ namespace Eksamensprojekt_Programmering_v2
             return true;
         }
 
+        public int clickCount = 0;
+
         private void btnTest_Click(object sender, EventArgs e)
         {
-            txtFirstName.Text = "victor";
-            txtLastName.Text = "risager";
-            txtTeamName.Text = "Test";
+            switch (clickCount)
+            {
+                case 0:
+                    txtFirstName.Text = "victor";
+                    txtLastName.Text = "risager";
+                    txtTeamName.Text = "Test";
+                    clickCount++;
+                    break;
+                case 1:
+                    txtFirstName.Text = "jonas";
+                    txtLastName.Text = "ellesgaard";
+                    clickCount++;
+                    break;
+                case 2:
+                    txtFirstName.Text = "michelle";
+                    txtLastName.Text = "kristensen";
+                    clickCount++;
+                    break;
+
+            }
+
         }
 
         private string PrintName(Player p)

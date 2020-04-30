@@ -65,7 +65,7 @@
             this.lsbTeamMembers.FormattingEnabled = true;
             this.lsbTeamMembers.ItemHeight = 16;
             this.lsbTeamMembers.Location = new System.Drawing.Point(81, 133);
-            this.lsbTeamMembers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lsbTeamMembers.Margin = new System.Windows.Forms.Padding(4);
             this.lsbTeamMembers.Name = "lsbTeamMembers";
             this.lsbTeamMembers.Size = new System.Drawing.Size(296, 516);
             this.lsbTeamMembers.TabIndex = 6;
@@ -85,7 +85,7 @@
             // 
             this.txtTeamName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTeamName.Location = new System.Drawing.Point(431, 119);
-            this.txtTeamName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTeamName.Margin = new System.Windows.Forms.Padding(4);
             this.txtTeamName.Name = "txtTeamName";
             this.txtTeamName.Size = new System.Drawing.Size(255, 22);
             this.txtTeamName.TabIndex = 0;
@@ -127,7 +127,7 @@
             // 
             this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastName.Location = new System.Drawing.Point(431, 348);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(255, 22);
             this.txtLastName.TabIndex = 2;
@@ -136,7 +136,7 @@
             // 
             this.btnCreatePlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreatePlayer.Location = new System.Drawing.Point(431, 378);
-            this.btnCreatePlayer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCreatePlayer.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreatePlayer.Name = "btnCreatePlayer";
             this.btnCreatePlayer.Size = new System.Drawing.Size(255, 58);
             this.btnCreatePlayer.TabIndex = 3;
@@ -148,7 +148,7 @@
             // 
             this.cmbPlayers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPlayers.Location = new System.Drawing.Point(431, 594);
-            this.cmbPlayers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbPlayers.Margin = new System.Windows.Forms.Padding(4);
             this.cmbPlayers.Name = "cmbPlayers";
             this.cmbPlayers.Size = new System.Drawing.Size(255, 24);
             this.cmbPlayers.TabIndex = 4;
@@ -157,7 +157,7 @@
             // 
             this.btnSelectPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectPlayer.Location = new System.Drawing.Point(431, 631);
-            this.btnSelectPlayer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSelectPlayer.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelectPlayer.Name = "btnSelectPlayer";
             this.btnSelectPlayer.Size = new System.Drawing.Size(255, 79);
             this.btnSelectPlayer.TabIndex = 5;
@@ -169,7 +169,7 @@
             // 
             this.btnCreateTeam.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateTeam.Location = new System.Drawing.Point(755, 496);
-            this.btnCreateTeam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCreateTeam.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreateTeam.Name = "btnCreateTeam";
             this.btnCreateTeam.Size = new System.Drawing.Size(180, 214);
             this.btnCreateTeam.TabIndex = 7;
@@ -203,7 +203,7 @@
             // 
             this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstName.Location = new System.Drawing.Point(431, 285);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(255, 22);
             this.txtFirstName.TabIndex = 1;
@@ -212,7 +212,7 @@
             // 
             this.btnTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTest.Location = new System.Drawing.Point(755, 218);
-            this.btnTest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTest.Margin = new System.Windows.Forms.Padding(4);
             this.btnTest.Name = "btnTest";
             this.btnTest.Size = new System.Drawing.Size(180, 185);
             this.btnTest.TabIndex = 14;
@@ -224,7 +224,7 @@
             // 
             this.btnRemovePlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemovePlayer.Location = new System.Drawing.Point(81, 657);
-            this.btnRemovePlayer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemovePlayer.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemovePlayer.Name = "btnRemovePlayer";
             this.btnRemovePlayer.Size = new System.Drawing.Size(297, 53);
             this.btnRemovePlayer.TabIndex = 15;
@@ -268,7 +268,7 @@
             this.Controls.Add(this.lsbTeamMembers);
             this.Controls.Add(this.Title);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TeamCreatorForm";
             this.ShowIcon = false;
             this.Text = "Team Creator";
