@@ -17,12 +17,13 @@ namespace Eksamensprojekt_Programmering_v2
         List<Player> lstOfPlayers = new List<Player>();
 
         List<Player> lstOfTeamMembers = new List<Player>();
+        TournamentCreator tournamentCreator = new TournamentCreator();
 
-        
 
         public TeamCreatorForm()
         {
             InitializeComponent();
+            tournamentCreator.Hid += OnHide; //tilføjer funktionen onhide til hid eventet. 
         }
         private void btnCreatePlayer_Click(object sender, EventArgs e)
         {
@@ -56,6 +57,8 @@ namespace Eksamensprojekt_Programmering_v2
                 return char.ToUpper(input[0]) + input.Substring(1);
             return input.ToUpper();
         }
+
+        
 
         private bool ValidName()
         {
@@ -110,15 +113,22 @@ namespace Eksamensprojekt_Programmering_v2
         {
             if (ValidTeam())
             {
-                this.Hide();
+                Hide();
                 Team team = new Team { TeamName = txtTeamName.Text, TeamMembers = lstOfTeamMembers };
-                TournamentCreator tournamentCreator = new TournamentCreator(team);
-                tournamentCreator.Show();
                 
+                tournamentCreator.Show(team);
+                lstOfTeamMembers.Clear();
+                lsbTeamMembers.Items.Clear();
             }
             else
                 MessageBox.Show("Please add players to the team, and give the team a name.");
 
+        }
+
+        //dette er en eventhandler.
+        private void OnHide(object sender, EventArgs e)
+        {
+            Show();
         }
 
         private bool ValidTeam()

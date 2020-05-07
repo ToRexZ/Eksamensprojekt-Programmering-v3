@@ -18,5 +18,7 @@ namespace Eksamensprojekt_Programmering_v2
         //    get { return firstName; } //get method
         //    set { firstName = value; } //set method
         //}
+
+        
     }
 }

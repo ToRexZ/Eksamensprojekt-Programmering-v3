@@ -201,6 +201,7 @@
             this.btnCreateNewTeam.TabIndex = 15;
             this.btnCreateNewTeam.Text = "Create New Team";
             this.btnCreateNewTeam.UseVisualStyleBackColor = true;
+            this.btnCreateNewTeam.Click += new System.EventHandler(this.btnCreateNewTeam_Click);
             // 
             // TournamentCreator
             // 
@@ -229,7 +230,6 @@
             this.Name = "TournamentCreator";
             this.ShowIcon = false;
             this.Text = "Tournament Creator";
-            this.Shown += new System.EventHandler(this.TournamentCreator_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

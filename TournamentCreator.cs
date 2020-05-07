@@ -13,24 +13,48 @@ namespace Eksamensprojekt_Programmering_v2
 {
     public partial class TournamentCreator : Form
     {
-        private Team t = new Team();
-        
+        public event EventHandler Hid;
 
-        public TournamentCreator(Team tempTeam)
+        //private Team t = new Team();
+        private List<Team> tournamentTeams = new List<Team>();
+
+
+        //constructoren for tournamentcreator klassen.
+        public TournamentCreator()
         {
             InitializeComponent();
-            t = tempTeam;
         }
 
-        
-
-        private void TournamentCreator_Shown(object sender, EventArgs e)
+        public void Show(Team t)
         {
-            lsbTestTeam.Items.Add("Team: " + t.TeamName);
-            foreach (var member in t.TeamMembers)
+            lsbTestTeam.Items.Clear();
+            tournamentTeams.Add(t);
+            Show();
+            foreach (var team in tournamentTeams)
             {
-                lsbTestTeam.Items.Add(member.FirstName + " " + member.LastName);
+                lsbTestTeam.Items.Add(team.TeamName);
             }
+
+            if ((tournamentTeams.Count & 1) == 0)
+            {
+                //create match.
+            }
+
+        }
+        
+        /// <summary>
+        /// public override function der overrider Hide. Dog kan en override ikke bruges, så vi laver en new.
+        /// </summary>
+        public new void Hide()
+        {
+            base.Hide(); //refererer til denne forms hide funktion. 
+            Hid.Invoke(this, null); //påberåber hid eventhandleren med denne instans, og null. 
+        }
+
+        //event på knapklik.
+        private void btnCreateNewTeam_Click(object sender, EventArgs e)
+        {
+            Hide(); //kalder hide funktionen.
         }
     }
 }
