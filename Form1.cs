@@ -203,8 +203,8 @@ namespace Eksamensprojekt_Programmering_v2
                     clickCount++;
                     break;
                 case 2:
-                    txtFirstName.Text = "michelle";
-                    txtLastName.Text = "kristensen";
+                    txtFirstName.Text = "Anders";
+                    txtLastName.Text = "Andersen";
                     clickCount++;
                     break;
                 case 3:
