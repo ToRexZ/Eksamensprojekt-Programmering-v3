@@ -26,16 +26,24 @@ namespace Eksamensprojekt_Programmering_v2
             InitializeComponent();
         }
 
+        //overskrevet funktion som bliver kørt når formen bliver vist.
         public void Show(Team t)
         {
+            //clear listboxen
             lsbTestTeam.Items.Clear();
+
+            //tilføjer holdet til holdlisten.
             tournamentTeams.Add(t);
+            //viser formen (denne metode er den oprindelige)
             Show();
+            //for hvert hold i listen med hold:
             foreach (var team in tournamentTeams)
             {
+                //tilføj teamnavnet til listboxen
                 lsbTestTeam.Items.Add(team.TeamName);
             }
 
+            //klargjort funktion til oprettelse af runder
             if ((tournamentTeams.Count & 1) == 0)
             {
                 //create match.
