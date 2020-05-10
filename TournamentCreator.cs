@@ -13,6 +13,7 @@ namespace Eksamensprojekt_Programmering_v2
 {
     public partial class TournamentCreator : Form
     {
+        //Opretter en event som instans af klassen Eventhandler, og navngiver den Hid.
         public event EventHandler Hid;
 
         //private Team t = new Team();
